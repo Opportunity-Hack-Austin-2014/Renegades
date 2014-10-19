@@ -1,0 +1,46 @@
+@mixin box-shadow($shadow){
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	    -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin place-holder($color, $fontStyle, $fontSize, $fontWeight, $paddingLeft){
+	::-webkit-input-placeholder {
+	   color: $color;
+	   font-style: $fontStyle;
+	   font-size: $fontSize;
+	   font-weight: $fontWeight;
+	   padding-left: $paddingLeft;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: $color;
+	   font-style: $fontStyle; 
+	   font-size: $fontSize;
+	   font-weight: $fontWeight;
+	   padding-left: $paddingLeft;
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: $color;
+	   font-style: $fontStyle; 
+	   font-size: $fontSize; 
+	   font-weight: $fontWeight;
+	   padding-left: $paddingLeft;
+	}
+
+	:-ms-input-placeholder {  
+	   color: $color;
+	   font-style: $fontStyle;
+	   font-size: $fontSize;
+	   font-weight: $fontWeight; 
+	   padding-left: $paddingLeft; 
+	}
+}
